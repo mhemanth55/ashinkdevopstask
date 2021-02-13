@@ -2,6 +2,13 @@ provider "aws" {
   region = "ap-south-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "ashinkdevopstask-terraform"
+    key    = "terraform/my/key"
+    region = "ap-south-1"
+  }
+}
 
 ## EC2 resource
 
