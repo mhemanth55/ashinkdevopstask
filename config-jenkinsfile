@@ -10,7 +10,7 @@ pipeline {
                     pwd
                     cd ansible
                     chmod 666 DevOps-Key.pem
-                    ansible -i inventory  -m ping all
+                    ansible -i inventory  -m ping dashboard
                     '''
                 }
             }
