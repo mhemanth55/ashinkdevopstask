@@ -8,6 +8,8 @@ pipeline {
                     sh '''
                     ls -ltr 
                     pwd
+                    cd ansible
+                    ansible -i inventory  -m ping all
                     '''
                 }
             }
