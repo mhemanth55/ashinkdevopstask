@@ -5,24 +5,23 @@ pipeline {
         stage('set variables'){
             steps{
                 script{
-                    sh ''' 
+                    sh '''
                     aws configure set aws_access_key_id ${acces_key}
                     aws configure set aws_secret_access_key ${secret_key}
                     aws configure set default.region ap-south-1
-                    aws configure set default.output json 
+                    aws configure set default.output json
                     '''
                 }
             }
         }
         stage("terraform"){
             steps{
-                cd terraform
-                terraform help
-                terraform --version
-                terraform init
-                terraform plan
+                script {
+                    cd terraform
+                    terraform init
+                    terraform plan
+                }
             }
         }
     }
-
 }
