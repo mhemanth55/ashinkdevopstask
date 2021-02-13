@@ -1,0 +1,8 @@
+---
+- hosts: dashboard
+  tasks:
+    - name: update ingnx config file
+      become: true
+      copy:
+        src: index.nginx-debian.html
+        dest: /var/www/html/
