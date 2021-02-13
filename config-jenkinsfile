@@ -9,7 +9,7 @@ pipeline {
                     ls -ltr 
                     pwd
                     cd ansible
-                    chmod 666 DevOps-Key.pem
+                    chmod 600 DevOps-Key.pem
                     export ANSIBLE_HOST_KEY_CHECKING=False
                     ansible -i inventory  -m ping dashboard
                     '''
