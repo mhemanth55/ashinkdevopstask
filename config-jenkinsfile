@@ -12,6 +12,7 @@ pipeline {
                     chmod 600 DevOps-Key.pem
                     export ANSIBLE_HOST_KEY_CHECKING=False
                     ansible -i inventory  -m ping dashboard
+                    ansible-playbook -i inventory playbook.yml
                     '''
                 }
             }
