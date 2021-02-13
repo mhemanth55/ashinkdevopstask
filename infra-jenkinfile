@@ -17,9 +17,11 @@ pipeline {
         stage("terraform"){
             steps{
                 script {
+                    sh '''
                     cd terraform
                     terraform init
                     terraform plan
+                    '''
                 }
             }
         }
