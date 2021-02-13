@@ -1,6 +1,8 @@
 [dashboard:vars]
 ansible_ssh_private_key_file=DevOps-Key.pem
 ansible_user=ubuntu
+
+[defaults]
 host_key_checking = False
 [dashboard]
 65.1.131.3
