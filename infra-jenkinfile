@@ -17,6 +17,7 @@ pipeline {
         stage("terraform"){
             steps{
                 cd terraform
+                terraform help
                 terraform --version
                 terraform init
                 terraform plan
