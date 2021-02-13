@@ -8,7 +8,7 @@ pipeline {
                     sh '''
                     ls -ltr 
                     pwd
-                    cd ansiblie
+                    cd ansible
                     chmod 666 DevOps-Key.pem
                     ansible -i inventory  -m ping all
                     '''
