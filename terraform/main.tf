@@ -23,5 +23,5 @@ resource "aws_instance" "nginx_instance" {
   subnet_id = var.subnet
   associate_public_ip_address = true
   user_data = data.template_file.nginx.rendered
-  key = "DevOps-Key"
+  key_name = "DevOps-Key"
 }
